@@ -2,7 +2,7 @@
     width: 475px;
 }
 body {
-    font-family: "Poppins" serif;
+    font-family: "Poppins", serif;
     background-color: #f1f1f1;
     background-image: url('../images/concrete_seamless.png');
 }
