@@ -89,7 +89,7 @@ header {
 
 @media screen and (prefers-reduced-motion: reduce){
     #logo {
-        animation: initial;
+        animation: none;
     }
 }
 
