@@ -12,11 +12,12 @@ header {
     align-items: center;
 }
 
-.nav-links {
+.nav_links {
     display: flex;
+    flex-direction: column;
 }
 
-.nav-links a, a:visited{
+.nav_links a, a:visited{
     color: blue;
 }
 .card > header {
@@ -45,4 +46,81 @@ header {
     border: solid 10px #50C7C7;
     margin: 10px;
     width: 300px;   
+}
+
+.gallery {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@keyframes mymove {
+    from {width: 25px; opacity: 0;}
+    to {width: 475px; opacity: 1;}
+}
+
+#logo {
+    animation-name: mymove;
+    animation-duration: 5s;
+}
+
+@media screen and (min-width: 900px){
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .nav_links {
+        flex-direction: row;
+    }
+
+    .card {
+        flex-basis: 250px;
+    }
+    body > header {
+        flex-direction: row;
+        justify-content: space-between;
+        position: sticky;
+        top: 0;
+    }
+}
+
+@media screen and (prefers-reduced-motion: reduce){
+    #logo {
+        animation: initial;
+    }
+}
+
+@media print {
+    body{
+        background-image: none;
+        font-family:Arial, Helvetica, sans-serif;
+    }
+
+    header {
+        flex-direction: column;
+    }
+    nav {
+        width: 100%;
+    }
+    .nav_links {
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+    }
+    .pricing {
+        align-items: flex-end;
+        flex-wrap: nowrap;
+    }
+    .card {
+        border: solid #45ADDD 2px;
+    }
+    #gallery, .gallery{
+        display: none;
+    }
+    .card ul li:nth-child(2)::after {
+        content: "\1F44D";
+    }
 }
