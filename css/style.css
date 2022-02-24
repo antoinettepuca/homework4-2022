@@ -116,6 +116,7 @@ header {
     }
     .card {
         border: solid #45ADDD 2px;
+        flex-basis: 325px;
     }
     #gallery, .gallery{
         display: none;
